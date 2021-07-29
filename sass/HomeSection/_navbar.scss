@@ -1,0 +1,109 @@
+.myNav{
+    // background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    color: #fff;
+    .logo{
+        position: relative;
+        border: 2px solid;
+        padding:0.6rem;
+    }
+    .logo::before{
+        content: "";
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 3px 0px 0px 3px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    } 
+    
+    .nav-links{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        list-style-type: none;
+        display: flex;
+        a{
+            position: relative;  //for hover animation
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        a::before{
+            content: "";
+            position:absolute;
+            bottom: 0;
+            left:50%;
+            width:0%;
+            height: 3px;
+            background-color: color(buttons);
+            transition: all 0.4s;
+        }
+        a:hover::before{
+            left: 0;
+            width: 100%;
+        }
+    }
+    
+    .burger{
+        display: none;
+        .line1, .line2,.line3{
+            width: 40px;
+            height: 2px;
+            background-color: #fff;
+            margin-bottom: 6px;
+            transition: all 0.5s;
+        }
+    }
+
+    transition: all 0.3s ease;
+}
+
+
+.burger-change{
+    .line1{
+        transform: rotate(-45deg) translate(0px,12px);
+    }
+    .line2{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    .line3{
+        transform: rotate(45deg) translate(0px,-12px);
+    }
+}
+
+
+
+/**FOR WHITE BACKGROUNDS***/
+.newNav{
+    background-color:#f1faee;
+    color:#000;
+    
+    a{
+        font-weight: 600;
+        color: #000 !important;
+    }
+    border-bottom: 1px solid #c1c1c1;
+    .burger{
+        .line1,.line2,.line3{
+            background-color: #000;
+        }    
+    } 
+    .logo::before{
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
+    }
+    
+}

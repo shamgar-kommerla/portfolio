@@ -1,0 +1,21 @@
+.about-section{
+    width: 100%;
+    margin:auto; 
+
+    z-index: 0;
+   
+    .for-centering{
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .intro{
+            h2{
+                font-size: large;
+                font-weight: bold;
+            }
+            text-align: center;
+            padding: 1rem;
+        }
+    }     
+}

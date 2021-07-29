@@ -1,0 +1,58 @@
+.education {
+  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+  //   background-color: #c1c1c1;
+  //   background-color: color(bgGrey);
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0rem;
+  .heading {
+    color: color(headings);
+    // margin-left: -10rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+  }
+  .college {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    .date {
+      flex: 0.3;
+      padding-left: 1rem;
+
+      p {
+        font-size: 16px;
+        font-weight: bold;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: all 0.3s ease-in;
+      }
+      .eduAnimation {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+      border-left: 2.5px solid color(headings);
+      border-radius: 2px;
+    }
+    .place {
+      flex: 0.6;
+      padding-left: 1rem;
+      min-height: 40px;
+      border-left: 2.5px solid color(headings);
+      border-radius: 2px;
+      p {
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: all 0.3s ease-in;
+      }
+      .eduAnimation {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+  }
+}
