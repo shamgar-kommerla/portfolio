@@ -6,6 +6,7 @@ $colors: (
   headings: #e85d04,
   // bgGrey:#e9ecef
   bgGrey: #f8edeb,
+  sth: rgba(255, 84, 0, 0.8),
 );
 
 @function color($colorName) {
@@ -40,6 +41,11 @@ html {
 /**EDUCATION SECTION**/
 @import './EducationSection/education';
 
+/** PROJECTS SECTION **/
+@import './ProjectsSection/projects';
+
+/** FOOTER SECTION **/
+@import './FooterSection/footer';
 /*****MEDIA QUERIES******/
 @import './MediaQueries/mediaqueries';
 

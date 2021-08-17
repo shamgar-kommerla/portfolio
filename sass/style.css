@@ -41,7 +41,7 @@ html {
 }
 
 .myNav .logo::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -71,7 +71,7 @@ html {
 }
 
 .myNav .nav-links a::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -87,11 +87,33 @@ html {
   width: 100%;
 }
 
+.myNav .nav-links .cut-button {
+  display: none;
+}
+
 .myNav .burger {
   display: none;
 }
 
-.myNav .burger .line1, .myNav .burger .line2, .myNav .burger .line3 {
+.myNav .burger .line1 {
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 6px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.myNav .burger .line2 {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 6px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.myNav .burger .line3 {
   width: 40px;
   height: 2px;
   background-color: #fff;
@@ -101,19 +123,25 @@ html {
 }
 
 .burger-change .line1 {
-  -webkit-transform: rotate(-45deg) translate(0px, 12px);
-          transform: rotate(-45deg) translate(0px, 12px);
+  width: 40px;
+  -webkit-transform-origin: end;
+          transform-origin: end;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .burger-change .line2 {
+  width: 40px;
   opacity: 0;
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
 }
 
 .burger-change .line3 {
-  -webkit-transform: rotate(45deg) translate(0px, -12px);
-          transform: rotate(45deg) translate(0px, -12px);
+  -webkit-transform-origin: start;
+          transform-origin: start;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 /**FOR WHITE BACKGROUNDS***/
@@ -128,7 +156,9 @@ html {
   color: #000 !important;
 }
 
-.newNav .burger .line1, .newNav .burger .line2, .newNav .burger .line3 {
+.newNav .burger .line1,
+.newNav .burger .line2,
+.newNav .burger .line3 {
   background-color: #000;
 }
 
@@ -410,6 +440,93 @@ html {
           transform: translateX(0px);
 }
 
+/** PROJECTS SECTION **/
+.projects {
+  min-height: 60vh;
+  background-color: #eaebeb;
+}
+
+.projects .x {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+  padding: 2rem;
+}
+
+.projects .card {
+  background-color: #fff;
+  position: relative;
+  width: 220px;
+  height: 350px;
+  margin: 0.7rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.projects .card .card-img {
+  height: 100%;
+}
+
+.projects .card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects .card .card-name {
+  background-color: rgba(255, 84, 0, 0.8);
+  font-size: 14px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0.5rem 0;
+  color: #eaebeb;
+}
+
+.projects .card .card-name h2 {
+  letter-spacing: 2px;
+}
+
+.projects .card .zinc {
+  position: absolute;
+  content: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 158, 0, 0.2)), color-stop(rgba(255, 121, 0, 0.5)), to(rgba(255, 84, 0, 0.8)));
+  background: linear-gradient(to top, rgba(255, 158, 0, 0.2), rgba(255, 121, 0, 0.5), rgba(255, 84, 0, 0.8));
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.projects .card:hover .zinc {
+  content: '';
+  opacity: 1;
+}
+
+/** FOOTER SECTION **/
+footer {
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(232, 93, 4, 0.6);
+}
+
 /*****MEDIA QUERIES******/
 @media (max-width: 850px) {
   .main .name-section {
@@ -492,6 +609,13 @@ html {
   }
   .myNav .nav-links li {
     opacity: 0;
+  }
+  .myNav .nav-links .cut-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    float: left;
+    display: block;
   }
   .myNav .nav-active {
     -webkit-transform: translateX(0%);
