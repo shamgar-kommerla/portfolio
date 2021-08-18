@@ -1,19 +1,19 @@
-let target1= document.querySelector('.picture');
+let target1 = document.querySelector('.picture');
 let target2 = document.querySelector('.intro');
 let options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.4
-}         
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.4,
+};
 
 let callbackFunc = (entries, observer) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting ){
-            entry.target.classList.add('fade-in');
-        }else if(!entry.isIntersecting){
-            // entry.target.classList.remove('fade-in');
-        }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    } else if (!entry.isIntersecting) {
+      // entry.target.classList.remove('fade-in');
+    }
+  });
 };
 let observer = new IntersectionObserver(callbackFunc, options);
 observer.observe(target1);
@@ -25,29 +25,46 @@ let target3 = document.querySelector('.education');
 let collegeDates = document.querySelectorAll('.college .date p');
 let collegeNames = document.querySelectorAll('.college .place p');
 
-
 let eduOptions = {
-    root:null,
-    rootMargin:'0px',
-    threshold:0.5
-}
-
-let eduCallback = (entries, observer) =>{
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            collegeDates.forEach((date,index) => {
-               
-                date.classList.add('eduAnimation');
-            })
-            
-            setTimeout(()=>{
-                collegeNames.forEach(name =>{
-                    name.classList.add('eduAnimation');
-                })
-            },500);
-        }
-    })    
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5,
 };
 
-let eduObserver = new IntersectionObserver(eduCallback,eduOptions);
+let eduCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      collegeDates.forEach((date, index) => {
+        date.classList.add('eduAnimation');
+      });
+
+      setTimeout(() => {
+        collegeNames.forEach((name) => {
+          name.classList.add('eduAnimation');
+        });
+      }, 500);
+    }
+  });
+};
+
+let eduObserver = new IntersectionObserver(eduCallback, eduOptions);
 eduObserver.observe(target3);
+
+/***PROJECTS SECTION****/
+// let target4 = document.querySelector('.card');
+// console.log(target4);
+// let projOptions = {
+//   root: null,
+//   rootMargin: '0px',
+//   threshold: 0.5,
+// };
+
+// let projCallback = (entries, observer) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('cardGoesUp');
+//     }
+//   });
+// };
+// let projObserver = new IntersectionObserver(projCallback, projOptions);
+// projObserver.observe(target4);

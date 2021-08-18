@@ -122,28 +122,26 @@ html {
   transition: all 0.5s;
 }
 
-.burger-change .line1 {
-  width: 40px;
-  -webkit-transform-origin: end;
-          transform-origin: end;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+/*****
+.burger-change {
+  .line1 {
+    width: 40px;
+    // transform: rotate(-45deg) translate(0px, 12px);
+    transform-origin: end;
+    transform: rotate(-45deg);
+  }
+  .line2 {
+    width: 40px;
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  .line3 {
+    // transform: rotate(45deg) translate(0px, -12px);
+    transform-origin: start;
+    transform: rotate(45deg);
+  }
 }
-
-.burger-change .line2 {
-  width: 40px;
-  opacity: 0;
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
-}
-
-.burger-change .line3 {
-  -webkit-transform-origin: start;
-          transform-origin: start;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
+****/
 /**FOR WHITE BACKGROUNDS***/
 .newNav {
   background-color: #f1faee;
@@ -468,6 +466,8 @@ html {
   margin: 0.7rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 .projects .card .card-img {
@@ -510,6 +510,11 @@ html {
 .projects .card:hover .zinc {
   content: '';
   opacity: 1;
+}
+
+.projects .cardGoesUp {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 /** FOOTER SECTION **/
@@ -584,12 +589,12 @@ footer {
     cursor: pointer;
   }
   .myNav .nav-links {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
     width: 50%;
     position: absolute;
     right: 0;
-    top: 10vh;
-    height: 80vh;
+    top: 0;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -600,8 +605,9 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: all 0.4s ease-in;
@@ -611,11 +617,16 @@ footer {
     opacity: 0;
   }
   .myNav .nav-links .cut-button {
+    font-size: 1.5rem;
+    cursor: pointer;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 2rem;
+    right: 2rem;
     float: left;
     display: block;
+  }
+  .myNav .nav-links .cut-button:hover {
+    color: #ff9e00;
   }
   .myNav .nav-active {
     -webkit-transform: translateX(0%);

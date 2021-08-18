@@ -42,10 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
-
+  const crossButton = document.querySelector('.cut-button');
   burger.addEventListener('click', () => {
-    burger.classList.toggle('burger-change');
-
+    // burger.classList.add('burger-change');
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = '';
@@ -55,7 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }s`;
       }
     });
-    nav.classList.toggle('nav-active');
+    nav.classList.add('nav-active');
+  });
+  crossButton.addEventListener('click', () => {
+    nav.classList.remove('nav-active');
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = '';
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.5
+        }s`;
+      }
+    });
   });
 
   /***************************************************/
