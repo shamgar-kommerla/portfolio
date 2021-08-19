@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -337,9 +338,9 @@ body {
 }
 
 .about-section .for-centering .picture img {
-  width: 300px;
+  width: 280px;
   height: auto;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .about-section .for-centering .intro {
@@ -553,10 +554,6 @@ body {
   bottom: 0;
   padding: 0.5rem 0;
   color: #eaebeb;
-}
-
-.projects .card .card-name h2 {
-  letter-spacing: 2px;
 }
 
 .projects .card .zinc {
