@@ -439,9 +439,6 @@ body {
 }
 
 .education .college .date {
-  -webkit-box-flex: 0.3;
-      -ms-flex: 0.3;
-          flex: 0.3;
   padding-left: 1rem;
   border-left: 2.5px solid #e85d04;
   border-radius: 2px;
@@ -730,6 +727,10 @@ footer {
     width: 80%;
     margin: 0.6rem 0rem;
   }
+  .education .college .date {
+    padding-left: 0.5rem;
+    font-size: 10px;
+  }
   .education .college .place h2 {
     font-size: 14px;
   }
@@ -745,6 +746,9 @@ footer {
   .main .name-section .name {
     color: #f06925;
     font-size: 1.5rem;
+  }
+  .main .name-section p {
+    font-size: 14px;
   }
   .myNav .nav-links {
     width: 60%;

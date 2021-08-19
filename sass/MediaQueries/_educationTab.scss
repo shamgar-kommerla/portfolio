@@ -1,10 +1,16 @@
-.education{
-    padding: 2rem 0rem;
-    .college{
-        width: 80%;
-        .place{
-            h2{font-size: 14px;}
-        }
-        margin: 0.6rem 0rem;
+.education {
+  padding: 2rem 0rem;
+  .college {
+    width: 80%;
+    .date {
+      padding-left: 0.5rem;
+      font-size: 10px;
     }
+    .place {
+      h2 {
+        font-size: 14px;
+      }
+    }
+    margin: 0.6rem 0rem;
+  }
 }
