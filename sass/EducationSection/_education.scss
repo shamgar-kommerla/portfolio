@@ -1,7 +1,6 @@
 .education {
   clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
-  //   background-color: #c1c1c1;
-  //   background-color: color(bgGrey);
+  background-color: #fff;
   min-height: 60vh;
   display: flex;
   justify-content: center;
@@ -10,7 +9,6 @@
   padding: 2rem 0rem;
   .heading {
     color: color(headings);
-    // margin-left: -10rem;
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
   }
@@ -31,6 +29,7 @@
         transform: translateX(-10px);
         transition: all 0.3s ease-in;
       }
+
       .eduAnimation {
         opacity: 1;
         transform: translateX(0px);
@@ -44,10 +43,19 @@
       min-height: 40px;
       border-left: 2.5px solid color(headings);
       border-radius: 2px;
+      .college-name {
+        font-size: 15px;
+        font-weight: bold;
+      }
       p {
         opacity: 0;
+        font-size: 13px;
         transform: translateX(-10px);
         transition: all 0.3s ease-in;
+      }
+      .course-taken {
+        font-style: italic;
+        font-size: 14px;
       }
       .eduAnimation {
         opacity: 1;

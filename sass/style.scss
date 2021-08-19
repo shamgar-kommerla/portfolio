@@ -23,11 +23,13 @@ $colors: (
 html {
   scroll-behavior: smooth;
 }
-
+body {
+  background-color: #eaebeb;
+}
 .loader {
   display: none;
 }
-
+@import './PreLoaders/loader';
 /**NAVIGATION MENU**/
 @import './HomeSection/navbar';
 

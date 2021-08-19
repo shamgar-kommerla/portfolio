@@ -1,58 +1,52 @@
+@media (max-width: 850px) {
+  .main {
+    .name-section {
+      .name {
+        color: color(font);
+        font-size: 2rem;
+      }
+      margin-bottom: 2rem;
+    }
+    .contLinks {
+      bottom: 3%;
+      right: 50%;
+      height: 40px;
+      transform: translateX(50%);
+      flex-direction: row;
+      width: 50%;
+    }
+  }
 
-@media ( max-width: 850px) {
-    
-    .main{
-        .name-section{
-            .name{
-                color:color(font);
-                font-size: 2rem;
-            }
-            margin-bottom: 2rem;
-        }
-        .contLinks{
-            bottom:3%;
-            right: 50%;
-            height: 40px;
-            transform: translateX(50%);
-            flex-direction: row;
-            width: 50%;
-
-        }
-    }    
-
-    @import './aboutSecTab';
-    @import './navTab';
-    @import './educationTab';  
-    @import '../PreLoaders/loader';
-    
+  @import './aboutSecTab';
+  @import './navTab';
+  @import './educationTab';
+  // @import '../PreLoaders/loader';
 }
 
-
-
 @media (max-width: 500px) {
-    .main{
-        background-attachment:scroll;
-        .name-section{
-            .name{
-                color:color(font);
-                font-size: 1.5rem;
-            }
-            margin-bottom: 2rem;
-        }
+  .main {
+    background-attachment: scroll;
+    .name-section {
+      .name {
+        color: color(font);
+        font-size: 1.5rem;
+      }
+      margin-bottom: 2rem;
     }
-    .myNav{
-        .nav-links{
-            width: 60%;
-        }
+  }
+  .myNav {
+    .nav-links {
+      width: 60%;
     }
-    .about-section{
-        .heading{
-            display: none;
-        }
+  }
+  .about-section {
+    .heading {
+      display: none;
     }
-    .education{
-        .heading{
-            margin-left: 0rem;
-        }
+  }
+  .education {
+    .heading {
+      margin-left: 0rem;
     }
+  }
 }

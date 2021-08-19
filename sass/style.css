@@ -10,7 +10,53 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #eaebeb;
+}
+
 .loader {
+  display: none;
+}
+
+.loader {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.loader .logo {
+  position: relative;
+  border: 2px solid;
+  padding: 0.6rem;
+}
+
+.loader .logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 3px 0px 0px 3px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.disAppearClass {
   display: none;
 }
 
@@ -275,6 +321,7 @@ html {
   display: flex;
   width: 70%;
   margin: 1rem auto;
+  background-color: #eaebeb !important;
 }
 
 .about-section .for-centering .picture {
@@ -353,6 +400,7 @@ html {
 .education {
   -webkit-clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
           clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+  background-color: #fff;
   min-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -424,12 +472,23 @@ html {
   border-radius: 2px;
 }
 
+.education .college .place .college-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .education .college .place p {
   opacity: 0;
+  font-size: 13px;
   -webkit-transform: translateX(-10px);
           transform: translateX(-10px);
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+.education .college .place .course-taken {
+  font-style: italic;
+  font-size: 14px;
 }
 
 .education .college .place .eduAnimation {
@@ -442,6 +501,14 @@ html {
 .projects {
   min-height: 60vh;
   background-color: #eaebeb;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.projects .heading {
+  margin: 1rem;
+  color: #e85d04;
+  letter-spacing: 2px;
 }
 
 .projects .x {
@@ -455,7 +522,6 @@ html {
       flex-wrap: wrap;
   width: 70%;
   margin: auto;
-  padding: 2rem;
 }
 
 .projects .card {
@@ -605,9 +671,9 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: all 0.4s ease-in;
@@ -615,6 +681,7 @@ footer {
   }
   .myNav .nav-links li {
     opacity: 0;
+    margin: 1em 1.5em;
   }
   .myNav .nav-links .cut-button {
     font-size: 1.5rem;
@@ -668,44 +735,6 @@ footer {
   }
   .education .college .place h2 {
     font-size: 14px;
-  }
-  .loader {
-    background-color: white;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: 5;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  .loader .logo {
-    position: relative;
-    border: 2px solid;
-    padding: 0.6rem;
-  }
-  .loader .logo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 3px 0px 0px 3px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-  }
-  .disAppearClass {
-    display: none;
   }
 }
 

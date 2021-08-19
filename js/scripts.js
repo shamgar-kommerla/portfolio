@@ -14,9 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('myBar').style.width = scrolled + '%';
   }
   /*************************************************/
-  if (window.innerWidth <= 850) {
-    document.body.style.position = 'fixed';
-  }
+  document.body.style.position = 'fixed';
+
   setTimeout(() => {
     let Loader = document.querySelector('.loader');
     Loader.classList.add('disAppearClass');

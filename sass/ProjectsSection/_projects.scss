@@ -1,13 +1,19 @@
 .projects {
   min-height: 60vh;
   background-color: #eaebeb;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  .heading {
+    margin: 1rem;
+    color: color(headings);
+    letter-spacing: 2px;
+  }
   .x {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 70%;
     margin: auto;
-    padding: 2rem;
   }
   .card {
     background-color: #fff;
