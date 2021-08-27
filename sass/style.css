@@ -528,10 +528,6 @@ body {
   width: 220px;
   height: 350px;
   margin: 0.7rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
 }
 
 .projects .card .card-img {
@@ -567,14 +563,31 @@ body {
   transition: all 0.2s;
 }
 
+.projects .left {
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.projects .right {
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
 .projects .card:hover .zinc {
   content: '';
   opacity: 1;
 }
 
-.projects .cardGoesUp {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+.projects .cardAnim {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 /** FOOTER SECTION **/

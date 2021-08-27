@@ -51,20 +51,25 @@ let eduObserver = new IntersectionObserver(eduCallback, eduOptions);
 eduObserver.observe(target3);
 
 /***PROJECTS SECTION****/
-// let target4 = document.querySelector('.card');
-// console.log(target4);
-// let projOptions = {
-//   root: null,
-//   rootMargin: '0px',
-//   threshold: 0.5,
-// };
+// let cardsList = document.querySelectorAll('.card');
+let target4 = document.querySelectorAll('.card');
+console.log(target4);
+let projOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5,
+};
 
-// let projCallback = (entries, observer) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('cardGoesUp');
-//     }
-//   });
-// };
-// let projObserver = new IntersectionObserver(projCallback, projOptions);
-// projObserver.observe(target4);
+let projCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target.classList);
+      entry.target.classList.add('cardAnim');
+      console.log(entry.target.classList);
+    }
+  });
+};
+let projObserver = new IntersectionObserver(projCallback, projOptions);
+target4.forEach((myTarget) => {
+  projObserver.observe(myTarget);
+});
